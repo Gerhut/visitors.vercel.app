@@ -1,7 +1,6 @@
 # visitors.vercel.app
 
-[![Build Status](https://travis-ci.org/Gerhut/visitors.vercel.app.svg?branch=master)](https://travis-ci.org/Gerhut/visitors.vercel.app)
-[![Coverage Status](https://coveralls.io/repos/github/Gerhut/visitors.vercel.app/badge.svg?branch=master)](https://coveralls.io/github/Gerhut/visitors.vercel.app?branch=master)
+[![Build Status](https://travis-ci.com/Gerhut/visitors.vercel.app.svg)](https://travis-ci.com/Gerhut/visitors.vercel.app)
 [![dependencies Status](https://david-dm.org/Gerhut/visitors.vercel.app/status.svg)](https://david-dm.org/Gerhut/visitors.vercel.app)
 [![devDependencies Status](https://david-dm.org/Gerhut/visitors.vercel.app/dev-status.svg)](https://david-dm.org/Gerhut/visitors.vercel.app?type=dev)
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)

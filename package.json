@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "Visitors badge on Vercel and FaunaDB.",
   "main": "api/index.js",
+  "scripts": {
+    "test": "standard"
+  },
   "repository": "git@github.com:Gerhut/visitors.vercel.app.git",
   "author": "George Cheng <Gerhut@GMail.com>",
   "license": "MIT",

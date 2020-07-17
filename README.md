@@ -1,10 +1,9 @@
-# visitors.vercel.app
+# ![visitors](https://visitors.vercel.app/Gerhut/visitors.vercel.app)
 
 [![Build Status](https://travis-ci.com/Gerhut/visitors.vercel.app.svg)](https://travis-ci.com/Gerhut/visitors.vercel.app)
 [![dependencies Status](https://david-dm.org/Gerhut/visitors.vercel.app/status.svg)](https://david-dm.org/Gerhut/visitors.vercel.app)
 [![devDependencies Status](https://david-dm.org/Gerhut/visitors.vercel.app/dev-status.svg)](https://david-dm.org/Gerhut/visitors.vercel.app?type=dev)
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
-![visitors](https://visitors.vercel.app/Gerhut/visitors.vercel.app)
 
 Visitors badge on [Vercel](https://vercel.com/) and [FaunaDB](https://fauna.com/).
 

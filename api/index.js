@@ -2,7 +2,12 @@ import assert from 'assert'
 import { Client, query, errors } from 'faunadb'
 import { makeBadge } from 'badge-maker'
 
-const { FAUNADB_SECRET } = process.env
+import hmac from '../hmac'
+
+const {
+  FAUNADB_SECRET,
+  HMAC_KEY
+} = process.env
 const COLLECTION_NAME = 'visitors'
 const INDEX_NAME = 'visitors_by_url'
 
@@ -14,6 +19,18 @@ assert(FAUNADB_SECRET != null, 'No FAUNADB_SECRET environment variable provided.
  */
 export default async function api (request, response) {
   const { url } = request
+  const { pathname, searchParams } = new URL(url, 'http://localhost/')
+  if (HMAC_KEY != null) {
+    const token = searchParams.get('token')
+    if (token == null) {
+      response.writeHead(400).end('no token provided')
+      return
+    }
+    if (token !== hmac(HMAC_KEY, pathname)) {
+      response.writeHead(403).end('invalid token')
+      return
+    }
+  }
   try {
     const client = new Client({ secret: process.env.FAUNADB_SECRET })
     let visitors
@@ -22,7 +39,7 @@ export default async function api (request, response) {
         query.Select(
           ['data', 'visitors'],
           query.Let(
-            { match: query.Match(query.Index(INDEX_NAME), url) },
+            { match: query.Match(query.Index(INDEX_NAME), pathname) },
             query.If(
               query.Exists(query.Var('match')),
               query.Let(
@@ -36,7 +53,9 @@ export default async function api (request, response) {
                   }
                 })
               ),
-              query.Create(query.Collection(COLLECTION_NAME), { data: { url, visitors: 1 } })
+              query.Create(query.Collection(COLLECTION_NAME), {
+                data: { url: pathname, visitors: 1 }
+              })
             )
           )
         )

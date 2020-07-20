@@ -15,7 +15,7 @@
     "faunadb": "^2.14.2"
   },
   "devDependencies": {
-    "@vercel/node": "^1.7.2",
+    "dotenv": "^8.2.0",
     "standard": "^14.3.4",
     "vercel": "^19.1.2"
   }

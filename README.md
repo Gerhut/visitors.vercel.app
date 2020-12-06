@@ -5,17 +5,17 @@
 [![devDependencies Status](https://david-dm.org/Gerhut/visitors.vercel.app/dev-status.svg)](https://david-dm.org/Gerhut/visitors.vercel.app?type=dev)
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
-Visitors badge on [Vercel](https://vercel.com/) and [FaunaDB](https://fauna.com/).
+Visitors badge on [Vercel](https://vercel.com/) and [Lambda Store](https://lambda.store/).
 
 ## Deploy Your Visitors Badge to Vercel and FaunaDB
 
 1. [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/Gerhut/visitors.vercel.app)
 
-2. [Add FaunaDB integration](https://vercel.com/integrations/faunadb/add)
+2. [Add a Redis store like Lambda Store](https://console.lambda.store/pages/newdatabase)
 
-3. Link the database to the app
+3. Set REDIS_URL environment in your Vercal app
 
-4. Redeploy the Vercel app to apply the FaunaDB integration
+4. Redeploy the Vercel app to apply the Lambda Store integration
 
 5. We are all set!
 
